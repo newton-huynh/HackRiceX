@@ -5,11 +5,11 @@ import logo from '../../Images/nojusticenopeace.png'
 
 const HeaderWrapper = styled.div`
   display: grid;
-  grid-template-columns: 2fr 8fr;
+  grid-template-columns: 2fr 9fr;
   grid-template-rows: 100%;
   grid-template-areas: "LogoSpace NavBarSpace";
   height: 100%;
-  width: 100%;
+  width: auto;
   background-color: pink;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,6 @@ margin-left:3vw;
 
 const LogoSpaceWrapper = styled.div`
   grid-area: LogoSpace;
-  /* background-color:red; */
 `;
 
 const NavBarWrapper = styled.div`

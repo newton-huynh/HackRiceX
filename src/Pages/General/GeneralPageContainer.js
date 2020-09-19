@@ -14,6 +14,7 @@ const GeneralPageWrapper = styled.div`
     "mainDisplay"
     "footer";
 overflow: hidden;
+  
 `;
 
 const HeaderWrapper = styled.div`
@@ -24,7 +25,6 @@ const HeaderWrapper = styled.div`
 const MainDisplayWrapper = styled.div`
   grid-area: mainDisplay;
   background-color: yellow;
-  font-size: 200px;
   text-align: center;
 `;
 
@@ -35,10 +35,10 @@ const FooterWrapper = styled.div`
 
 function GeneralPageContainer() {
   return (
-      <Router>
+    <Router>
     <GeneralPageWrapper>
       <HeaderWrapper>  <Header/> </HeaderWrapper>
-      <MainDisplayWrapper> <PageRouting/> </MainDisplayWrapper>
+      <MainDisplayWrapper><PageRouting/></MainDisplayWrapper>
       <FooterWrapper> </FooterWrapper>
     </GeneralPageWrapper>
     </Router>
