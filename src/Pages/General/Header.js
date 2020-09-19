@@ -1,10 +1,11 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { NavLink } from 'react-router-dom';
+import logo from '../../Images/nojusticenopeace.png'
 
 const HeaderWrapper = styled.div`
   display: grid;
-  grid-template-columns: 3fr 7fr;
+  grid-template-columns: 2fr 8fr;
   grid-template-rows: 100%;
   grid-template-areas: "LogoSpace NavBarSpace";
   height: 100%;
@@ -14,9 +15,15 @@ const HeaderWrapper = styled.div`
   justify-content: center;
 `;
 
+const LogoPicture = styled.img`
+height:25vw;
+max-height:160px;
+margin-left:3vw;
+`
+
 const LogoSpaceWrapper = styled.div`
   grid-area: LogoSpace;
-  background-color: red;
+  /* background-color:red; */
 `;
 
 const NavBarWrapper = styled.div`
@@ -33,10 +40,11 @@ background-color: skyblue;
 padding: 7px 10px 10px 10px;
 border-radius:20px;
 margin: 7px;
+text-decoration: none;
 `
 function NavBarItem(props) {
     return(
-        <StyledNavLink to={props.path}>
+        <StyledNavLink to={props.path} activeStyle={{backgroundColor:"white"}}>
             {props.name}
         </StyledNavLink>
     )
@@ -47,9 +55,11 @@ function NavBarItem(props) {
 function Header() {
   return (
     <HeaderWrapper>
-      <LogoSpaceWrapper>Logo</LogoSpaceWrapper>
+      <LogoSpaceWrapper>
+          <LogoPicture src={logo}/>
+      </LogoSpaceWrapper>
       <NavBarWrapper>
-        <NavBarItem path="/" name="Home"></NavBarItem>
+        <NavBarItem path="/Home" name="Home"></NavBarItem>
         <NavBarItem path="/Donate" name="Donate"></NavBarItem>
         <NavBarItem path="/AboutUs" name="About Us"></NavBarItem>
         <NavBarItem path="/TakeQuiz" name="Take Quiz"></NavBarItem>
