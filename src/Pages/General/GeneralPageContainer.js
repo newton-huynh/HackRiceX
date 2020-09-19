@@ -8,11 +8,12 @@ import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 const GeneralPageWrapper = styled.div`
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 10vh 110vh 8vh;
+  grid-template-rows: 10vh 82vh 8vh;
   grid-template-areas:
     "headerSpace"
     "mainDisplay"
     "footer";
+overflow: hidden;
 `;
 
 const HeaderWrapper = styled.div`

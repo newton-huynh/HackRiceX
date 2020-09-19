@@ -11,7 +11,7 @@ function PageRouting() {
   return (
 
           <Switch>
-            <Route path="/" exact component={HomePage} />
+            <Route path="/Home" exact component={HomePage} />
             <Route path="/AboutUs" component={AboutUsPage} />
             <Route path="/Donate" component={Donate} />
             <Route path="/TakeQuiz" component={TakeQuizPage} />
