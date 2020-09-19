@@ -1,8 +1,38 @@
-fetch("https://sheet.best/api/sheets/f036a22f-f21d-45f6-9eee-ce40be31f37c")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
+var Airtable = require("airtable");
+var base = new Airtable({ apiKey: "keyZe4sjft8xdVXzp" }).base(
+  "apppENI9HbgvplxWY"
+);
+
+let lawyers = [];
+
+base("Imported table")
+  .select({
+    // Selecting the first 3 records in Grid view:
+    //maxRecords: 3,
+    view: "Grid view",
+    //filterByFormula: "({City} = 'Houston')",
   })
-  .catch((error) => {
-    console.error(error);
-  });
+  .eachPage(
+    function page(records, fetchNextPage) {
+      // This function (`page`) will get called for each page of records.
+
+      records.forEach(function (record) {
+        console.log("Retrieved", record.get("Name"));
+      });
+
+      console.log(records);
+      lawyers = records;
+      // To fetch the next page of records, call `fetchNextPage`.
+      // If there are more records, `page` will get called again.
+      // If there are no more records, `done` will get called.
+      fetchNextPage();
+    },
+    function done(err) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+    }
+  );
+
+exports.default = lawyers;
