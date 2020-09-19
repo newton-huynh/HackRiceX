@@ -6,14 +6,18 @@ import AboutUsPage from "./Pages/ActualPages/AboutUsPage.js";
 import Donate from "./Pages/ActualPages/DonatePage.js";
 import TakeQuizPage from "./Pages/ActualPages/TakeQuizPage.js";
 import styled from "styled-components";
-import Routing from './Routing.js';
 
-
-
-function App() {
+function PageRouting() {
   return (
-    <GeneralPageContainer/>
+
+          <Switch>
+            <Route path="/Home" exact component={HomePage} />
+            <Route path="/AboutUs" component={AboutUsPage} />
+            <Route path="/Donate" component={Donate} />
+            <Route path="/TakeQuiz" component={TakeQuizPage} />
+          </Switch>
+
   );
 }
 
-export default App;
+export default PageRouting;
