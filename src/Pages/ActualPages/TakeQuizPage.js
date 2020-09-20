@@ -1,9 +1,11 @@
 import React from 'react'
+import Quiz from '../General/Quiz/Quiz.js'
+
 
 function TakeQuizPage() {
     return (
         <div>
-            TakeQuiz
+            <Quiz />
         </div>
     )
 }
