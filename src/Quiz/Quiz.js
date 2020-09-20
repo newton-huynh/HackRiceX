@@ -3,6 +3,7 @@ import { Formik, Field, Form } from "formik";
 import './quiz.css';
 import * as Yup from 'yup';
 import lawyers from "../Lawyers/AirtableData.js";
+import MatchResults from "./MatchResults";
 
 // Define the available options.
 const locations = ['Houston, TX', 'San Antonio, TX', 'Dallas, TX', 'Austin, TX', 'El Paso, TX', 'Corpus Christi, TX', 'McAllen, TX', 'No Preference'];
@@ -40,7 +41,8 @@ const raceOptions = races.map(race =>
     </div>
 );
 
-// Create the quiz and its submission behavior.
+// Create the quiz and define its submission behavior.
+let top_3_lawyers = [];
 const Quiz = () => (
     <div>
         <Formik
@@ -101,7 +103,7 @@ const Quiz = () => (
                     top_3_indices.push(high_score_index);
                 }
                 // Find and return the top 3 highest-scoring lawyers based on their indices.
-                let top_3_lawyers = [];
+
                 for (let i = 0; i < 3; i++) {
                     let lawyer_index = top_3_indices[i];
                     top_3_lawyers.push(lawyer_list[lawyer_index]);
@@ -154,10 +156,11 @@ const Quiz = () => (
                             <div className='error-message'>{errors.race}</div>
                         ) : null}
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" style={{ fontSize: "18px", borderStyle: "solid", borderColor: "#3d5a80", borderWidth: "4px", borderRadius: "10px" }}>Submit</button>
                 </Form>
             )}
         </Formik>
+        <MatchResults lawyers={top_3_lawyers}></MatchResults>
     </div >
 );
 
