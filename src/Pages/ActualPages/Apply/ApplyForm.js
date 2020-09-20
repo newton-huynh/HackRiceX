@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 // import ReactDOM from "react-dom";
 import { Formik, Form, useField, useFormikContext } from "formik";
 import * as Yup from "yup";
-// import styled from "@emotion/styled";
-// import "./styles.css";
-// import "./styles-custom.css";
 
 const MyTextInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -21,43 +18,8 @@ const MyTextInput = ({ label, ...props }) => {
   );
 };
 
-/* // Styled components ....
-const StyledSelect = styled.select`
-  color: var(--blue);
-`;
-
-const StyledErrorMessage = styled.div`
-  font-size: 12px;
-  color: var(--red-600);
-  width: 400px;
-  margin-top: 0rem;
-  &:before {
-    content: "❌ ";
-    font-size: 10px;
-  }
-  @media (prefers-color-scheme: dark) {
-    color: var(--red-300);
-  }
-`;
-
-const StyledLabel = styled.label`
-  margin-top: 0rem;
-`;
-
-const MySelect = ({ label, ...props }) => {
-  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
-  // which we can spread on <input> and alse replace ErrorMessage entirely.
-  const [field, meta] = useField(props);
-  return (
-    <>
-      <StyledLabel htmlFor={props.id || props.name}>{label}</StyledLabel>
-      <StyledSelect {...field} {...props} />
-      {meta.touched && meta.error ? (
-        <StyledErrorMessage>{meta.error}</StyledErrorMessage>
-      ) : null}
-    </>
-  );
-}; */
+let results = {};
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const SignupForm = () => {
   return (
@@ -108,10 +70,42 @@ const SignupForm = () => {
             .max(20, "Must be 20 characters or less")
             .required("Required"),
         })}
-        //???
-        onSubmit={async (values, { setSubmitting }) => {
-          await new Promise((r) => setTimeout(r, 500));
-          setSubmitting(false);
+        onSubmit={async (values) => {
+          await sleep(500);
+          //alert(JSON.stringify(values, null, 2));
+          results = JSON.stringify(values, null, 2);
+          alert(results);
+
+          var Airtable = require("airtable");
+          var base = new Airtable({ apiKey: "keyZe4sjft8xdVXzp" }).base(
+            "apppENI9HbgvplxWY"
+          );
+
+          base("Imported table").create(
+            [
+              {
+                fields: {
+                  Name: "--",
+                  Location: "Austin, TX",
+                  Phone: "833-533-4251",
+                  Email: "info@kimbroughlegal.com",
+                  Expertise1: "Family Law",
+                  Language: "Italian",
+                  Expertise2: "Criminal Defense",
+                  Expertise3: "Accident",
+                },
+              },
+            ],
+            function (err, records) {
+              if (err) {
+                console.error(err);
+                return;
+              }
+              records.forEach(function (record) {
+                console.log(record.getId());
+              });
+            }
+          );
         }}
       >
         <Form>

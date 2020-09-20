@@ -1,17 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import { Link, Button } from "rebass";
-
+import { results, SignupForm } from "./ApplyForm.js";
 var Airtable = require("airtable");
 var base = new Airtable({ apiKey: "keyZe4sjft8xdVXzp" }).base(
   "apppENI9HbgvplxWY"
 );
+console.log(results);
 
 base("Imported table").create(
   [
     {
       fields: {
-        Name: "Kimbrough Legal, PLLC",
+        Name: "values.Name",
         Location: "Austin, TX",
         Phone: "833-533-4251",
         Email: "info@kimbroughlegal.com",
