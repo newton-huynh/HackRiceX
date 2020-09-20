@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Link,Button} from 'rebass';
+import {Link, Button} from 'rebass';
 
 const DonateWrapper = styled.div`
     display: grid;
@@ -62,11 +62,15 @@ function DonatePage() {
             </DescriptionDonation>
             <LeftColDonate>
                 <p>donate to ActBlue:</p>
-                <Button variant='primary'><Link variant='nav' href='https://secure.actblue.com/donate/bail_funds_george_floyd'>actBlue</Link></Button>
+                <form action="https://secure.actblue.com/donate/bail_funds_george_floyd" method="get" target="_blank">
+                    <button type="submit" style={{fontSize:"18px", borderStyle:"solid", borderColor:"#3d5a80", borderWidth:"4px", borderRadius:"10px"}}>ActBlue</button>
+                </form>
             </LeftColDonate>
             <RightColDonate>
                 <p>donate to help Houston protestors get representation:</p>
-                <Button variant='primary'><Link variant='nav' href='https://www.gofundme.com/f/pro-bono-representation-of-houston-protestors?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1'>goFundMe</Link></Button>
+                <form action="https://www.gofundme.com/f/pro-bono-representation-of-houston-protestors?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1" method="get" target="_blank">
+                    <button type="submit" style={{fontSize:"18px", borderStyle:"solid", borderColor:"#3d5a80", borderWidth:"4px", borderRadius:"10px"}}>goFundme</button>
+                </form>
             </RightColDonate>
         </DonateWrapper>    
     )

@@ -2,40 +2,47 @@ import React from "react";
 import { Formik, Field, Form } from "formik";
 import './quiz.css';
 import * as Yup from 'yup';
+import { Lawyers } from "../Lawyers/Lawyers.js";
 
-const locations = ['Houston, TX', 'Dallas, TX', 'No Preference'];
+const locations = ['Houston, TX', 'San Antonio, TX', 'Dallas, TX', 'Austin, TX', 'Corpus Christi, TX', 'McAllen, TX', 'No Preference'];
 const locationOptions = locations.map(location =>
     <div className="quiz-option">
         
         <Field type="radio" name="location" value={location} />
         <label>{location}</label>
+
     </div>
 );
 
-const expertises = ['Family Law', 'Criminal Defense', 'No Preference'];
+const expertises = ['Family Law', 'Criminal Defense', 'Accident', 'Assault', 'Personal Injury', 'No Preference'];
 const expertiseOptions = expertises.map(expertise =>
     <div className="quiz-option">
         
         <Field type="radio" name="expertise" value={expertise} />
         <label>{expertise}</label>
+
     </div>
 );
 
-const languages = ['English', 'Spanish', 'No Preference'];
+const languages = ['Spanish', 'French', 'Arabic', 'Chinese', 'No Preference'];
 const languageOptions = languages.map(language =>
     <div className="quiz-option">
+
         
         <Field type="radio" name="language" value={language} />
         <label>{language}</label>
+
     </div>
 );
 
 const races = ['Black', 'Hispanic', 'No Preference'];
 const raceOptions = races.map(race =>
     <div className="quiz-option">
+
         
         <Field type="radio" name="race" value={race} />
         <label>{race}</label>
+
     </div>
 );
 
@@ -64,6 +71,7 @@ const Quiz = () => (
                 await new Promise(r => setTimeout(r, 500));
                 results = JSON.stringify(values, null, 2);
                 console.log(results);
+                // Lawyers(results);
             }}
         >
             {({ errors, touched }) => (
