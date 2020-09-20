@@ -62,6 +62,7 @@ function Header() {
         <NavBarItem path="/Home" name="Home"></NavBarItem>
         <NavBarItem path="/Donate" name="Donate"></NavBarItem>
         <NavBarItem path="/AboutUs" name="About Us"></NavBarItem>
+        <NavBarItem path="Apply" name="Apply"></NavBarItem>
         <NavBarItem path="/TakeQuiz" name="Take Quiz"></NavBarItem>
       </NavBarWrapper>
     </HeaderWrapper>
