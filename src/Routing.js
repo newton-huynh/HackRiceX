@@ -6,6 +6,7 @@ import AboutUsPage from "./Pages/ActualPages/AboutUsPage.js";
 import Donate from "./Pages/ActualPages/DonatePage.js";
 import TakeQuizPage from "./Pages/ActualPages/TakeQuizPage.js";
 import styled from "styled-components";
+import ApplyPage from './Pages/ActualPages/ApplyPage.js'
 
 function PageRouting() {
   return (
@@ -16,6 +17,7 @@ function PageRouting() {
       <Route path="/Home" exact component={HomePage} />
       <Route path="/AboutUs" component={AboutUsPage} />
       <Route path="/Donate" component={Donate} />
+      <Route path="/Apply" component={ApplyPage} />
       <Route path="/TakeQuiz" component={TakeQuizPage} />
     </Switch>
   );
