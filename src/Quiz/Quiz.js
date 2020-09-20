@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Field, Form } from "formik";
 import './quiz.css';
 import * as Yup from 'yup';
+import MatchResults from "./MatchResults";
 // import { Lawyers } from "../Lawyers/Lawyers.js";
 
 const lawyers = {
@@ -243,6 +244,7 @@ const raceOptions = races.map(race =>
     </div>
 );
 
+let top_3_lawyers = [];
 const Quiz = () => (
     <div>
         <Formik
@@ -303,7 +305,7 @@ const Quiz = () => (
                     top_3_indices.push(high_score_index);
                 }
                 // Find and return the top 3 highest-scoring lawyers based on their indices.
-                let top_3_lawyers = [];
+                
                 for (let i = 0; i < 3; i++) {
                     let lawyer_index = top_3_indices[i];
                     console.log(lawyer_index);
@@ -358,10 +360,11 @@ const Quiz = () => (
                         ) : null}
                     </div>
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" style={{fontSize:"18px", borderStyle:"solid", borderColor:"#3d5a80", borderWidth:"4px", borderRadius:"10px"}}>Submit</button>
                 </Form>
             )}
         </Formik>
+        <MatchResults lawyers={top_3_lawyers}></MatchResults>
     </div >
 );
 
