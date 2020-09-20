@@ -1,9 +1,9 @@
 import React from 'react'
-import Quiz from '../../Quiz/Quiz.js.js'
+import Quiz from '../../Quiz/Quiz.js'
 import styled from 'styled-components';
 
 
-const QuizPageWrapper= styled.div`
+const QuizPageWrapper = styled.div`
 background-color: white;
 height:100%;
 width:100%;
