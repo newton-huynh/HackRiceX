@@ -2,6 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import Person from './Person.js';
 import Newton from './../../../Images/newton.jpeg';
+import Janet from './../../../Images/janet.jpeg';
+import Vivian from './../../../Images/vivian.jpeg';
+import Anna from './../../../Images/anna.jpeg';
+
+
 
 const AboutUsWrapper = styled.div`
     display: grid;
@@ -22,7 +27,7 @@ const AboutUsTitle = styled.div`
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    margin: 30px;
+    margin: 50px;
     color: #293241;
 `;
 
@@ -76,16 +81,16 @@ function AboutUs () {
         <AboutUsWrapper>
             <AboutUsTitle>about us</AboutUsTitle>
             <NewtonBlurb>
-                <Person image={Newton} name="Newton Hyunh" bio="he loves cs"></Person>
+                <Person image={Newton} name="Newton Huynh" bio="he loves cs"></Person>
             </NewtonBlurb>
             <JanetBlurb>
-                <Person image="newton.jpg" name="Janet Lu" bio="he loves cs"></Person>
+                <Person image={Janet} name="Janet Lu" bio="he loves cs"></Person>
             </JanetBlurb>
             <AnnaBlurb>
-                <Person image="newton.jpg" name="Anna Bai" bio="he loves cs"></Person>
+                <Person image={Anna} name="Anna Bai" bio="he loves cs"></Person>
             </AnnaBlurb>
             <VivianBlurb>
-                <Person image="newton.jpg" name="Vivian Ellis" bio="he loves cs"></Person>
+                <Person image={Vivian} name="Vivian Ellis" bio="he loves cs"></Person>
             </VivianBlurb>
         </AboutUsWrapper>
     )
