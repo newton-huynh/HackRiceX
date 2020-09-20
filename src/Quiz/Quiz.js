@@ -102,25 +102,12 @@ const Quiz = () => (
                     }
                     top_3_indices.push(high_score_index);
                 }
-                // Find and return the top 3 highest-scoring lawyers based on their indices.
+                // Identify the top 3 highest-scoring lawyers based on their indices.
 
                 for (let i = 0; i < 3; i++) {
                     let lawyer_index = top_3_indices[i];
                     top_3_lawyers.push(lawyer_list[lawyer_index]);
                 }
-                // Print the information for each of the lawyers.
-                // for (let i = 0; i < 3; i++) {
-                //     console.log("Name: " + top_3_lawyers[i].Name);
-                //     console.log("Phone: " + top_3_lawyers[i].Phone);
-                //     console.log("Email: " + top_3_lawyers[i].Email);
-                //     console.log("Location: " + top_3_lawyers[i].Location);
-                //     console.log("Expertise 1: " + top_3_lawyers[i].Expertise1);
-                //     console.log("Expertise 2: " + top_3_lawyers[i].Expertise2);
-                //     console.log("Expertise 3: " + top_3_lawyers[i].Expertise3);
-                //     console.log("Expertise 4: " + top_3_lawyers[i].Expertise4);
-                //     console.log("Language: " + top_3_lawyers[i].Language);
-                //     console.log("Race: " + top_3_lawyers[i].Race);
-                // }
             }}
         >
             {({ errors, touched }) => (
