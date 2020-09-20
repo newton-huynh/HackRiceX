@@ -24,7 +24,7 @@ const MatchDescriptionTitle = styled.div`
 
 const MatchDescriptionList = styled.div`
     grid-area: MatchDescriptionList;
-    width: 30%;
+    width: 35%;
     margin: 0 auto;
     line-height: 25px;
     
