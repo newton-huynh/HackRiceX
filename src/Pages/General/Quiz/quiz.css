@@ -1,3 +1,57 @@
 .quiz-question {
-    font-size: 14px;
+    display: grid;
+    background-color:#293241;
+    padding:20px;
+    border-radius: 25px;
+    border-width:3px;
+    border-style:solid;
+    border-color:;
+    margin:20px;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    grid-template-rows: 60px auto;
+    grid-template-areas: 
+    "QuestionSpace"
+    "AnswerSpace"
+
+}
+
+.entire-quiz{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.quiz-answers{
+    grid-area:AnswerSpace;
+    background-color:#98C1D9;
+    place-items: center;
+    height:100%;
+    width:100%;
+    border-radius: 20px;
+    padding-top: 5px;
+
+}
+
+.quiz-option{
+    margin: 7px;
+}
+
+.quiz-label{
+    color:white;
+    grid-area:QuestionSpace;
+
+}
+
+.button {
+    background-color:red;
+}
+
+.error-message {
+    grid-area: QuestionSpace;
+    margin-bottom: 25px;
+    color:pink;
 }
