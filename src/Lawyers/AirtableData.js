@@ -82,7 +82,7 @@ const lawyers = {
         {
             Name: 'Edward Okwueze & Associates',
             Phone: '832-798-9850',
-            Email: 'criminalandimmigrationlawyers@yahoo.com',
+            Email: 'crimelawyers@yahoo.com',
             Location: 'Houston, TX',
             Expertise1: 'Immigration',
             Expertise2: 'Personal Injury',
@@ -102,7 +102,7 @@ const lawyers = {
             Race: 'Pacific Islander'
         },
         {
-            Name: 'The Law Office of Marcus Esther PLLC',
+            Name: 'Marcus Esther Law Office',
             Phone: '409-276-8034',
             Email: 'marcus@pllcoffice',
             Location: 'Houston, TX',
