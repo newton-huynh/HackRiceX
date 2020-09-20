@@ -64,7 +64,7 @@ function Header() {
         <NavBarItem path="/HowMatchingWorks" name="How Matching Works"></NavBarItem>
         <NavBarItem path="/AboutUs" name="About Us"></NavBarItem>
         <NavBarItem path="Apply" name="Apply"></NavBarItem>
-        <NavBarItem path="/TakeQuiz" name="Take Quiz"></NavBarItem>
+        <NavBarItem path="/TakeQuiz" name="Match"></NavBarItem>
       </NavBarWrapper>
     </HeaderWrapper>
   );
