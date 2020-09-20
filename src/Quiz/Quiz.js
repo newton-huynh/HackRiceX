@@ -2,7 +2,6 @@ import React from "react";
 import { Formik, Field, Form } from "formik";
 import './quiz.css';
 import * as Yup from 'yup';
-import { QuizQuestionWrapper } from "./StyledQuestionWrapper";
 
 const locations = ['Houston, TX', 'Dallas, TX', 'No Preference'];
 const locationOptions = locations.map(location =>
