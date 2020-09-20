@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 import React from "react";
 import Header from "./Header.js";
+import Footer from "./Footer.js";
 import PageRouting from "../../Routing.js";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import FUTURA from "../../Fonts/FUTURA.ttf";
@@ -51,7 +52,7 @@ function GeneralPageContainer() {
     <GeneralPageWrapper>
       <HeaderWrapper>  <Header/> </HeaderWrapper>
       <MainDisplayWrapper><PageRouting/></MainDisplayWrapper>
-      <FooterWrapper> </FooterWrapper>
+      <FooterWrapper> <Footer /> </FooterWrapper>
     </GeneralPageWrapper>
 
     </Router>
