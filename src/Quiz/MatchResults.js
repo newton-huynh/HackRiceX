@@ -1,5 +1,6 @@
 import React from 'react';
 import './MatchResults.css';
+import LawyerCard from './LawyerCard.js';
 
 
 function MatchResults(props) {
@@ -14,9 +15,9 @@ function MatchResults(props) {
                     document.getElementsByClassName("close")[0].onclick = function () { document.getElementById("myModal").style.display = "none" }
 
                 }}
-                {/* {props.lawyers.map( lawyer =>
-                <LawyerCard name={lawyer.Name} phone={lawyer.Phone} email={lawyer.Email} location={lawyer.Location} expertise1={lawyer.Expertise1}
-                    expertise2={lawyer.Expertise2} expertise3={lawyer.Expertise3} language={lawyer.language} race={lawyer.race}></LawyerCard>)}  */}
+                {props.lawyers.map(lawyer =>
+                    <LawyerCard name={lawyer.Name} phone={lawyer.Phone} email={lawyer.Email} location={lawyer.Location} expertise1={lawyer.Expertise1}
+                        expertise2={lawyer.Expertise2} expertise3={lawyer.Expertise3} language={lawyer.Language} race={lawyer.Race}></LawyerCard>)}
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p>it works!</p>
