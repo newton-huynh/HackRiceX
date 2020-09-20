@@ -1,5 +1,5 @@
 import React from 'react'
-import Quiz from '../General/Quiz/Quiz.js'
+import Quiz from '../../Quiz/Quiz.js'
 
 
 function TakeQuizPage() {

@@ -1,0 +1,16 @@
+.quiz-question {
+    font-size: 14px;
+}
+
+/* hide initial radio button appearance */
+/* .radio-button {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.button-appearance {
+    background-color: aqua;
+} */
