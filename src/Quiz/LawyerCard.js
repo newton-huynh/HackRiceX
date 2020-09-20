@@ -121,7 +121,7 @@ function MakeSubText(props) {
   );
 }
 
-function LawyerCard( props ) {
+function LawyerCard(props) {
   return (
     <LawyerCardWrapper>
       <NameSpaceWrapper>{props.name}</NameSpaceWrapper>
@@ -136,10 +136,10 @@ function LawyerCard( props ) {
         <MakeText title="Location" icon={<ImLocation2 />} subtitle={props.location} />
       </LocationSpaceWrapper>
       <LanguageSpaceWrapper>
-        <MakeText title="Language" icon={<MdLanguage />} subtitle={props.location} />
+        <MakeText title="Language" icon={<MdLanguage />} subtitle={props.language} />
       </LanguageSpaceWrapper>
       <RaceSpaceWrapper>
-        <MakeText title="Race" icon={<FaUserAlt />} subtitle={props.race}/>
+        <MakeText title="Race" icon={<FaUserAlt />} subtitle={props.race} />
       </RaceSpaceWrapper>
       <ExpertiseSpaceWrapper>
         <MakeText title="Expertise" icon={<BsBriefcaseFill />} subtitle={props.expertise1} />
