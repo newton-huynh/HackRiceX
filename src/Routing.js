@@ -8,6 +8,8 @@ import Donate from "./Pages/ActualPages/Donate/DonatePage.js";
 import TakeQuizPage from "./Pages/ActualPages/TakeQuizPage.js";
 import styled from "styled-components";
 import ApplyPage from './Pages/ActualPages/ApplyPage.js'
+import LawyerCard from "./Quiz/LawyerCard.js";
+import dummytestcard from './Quiz/dummytestcard.js'
 
 function PageRouting() {
   return (
@@ -21,6 +23,7 @@ function PageRouting() {
       <Route path="/Donate" component={Donate} />
       <Route path="/Apply" component={ApplyPage} />
       <Route path="/TakeQuiz" component={TakeQuizPage} />
+      <Route path='/Match' component={dummytestcard}/>
     </Switch>
   );
 }

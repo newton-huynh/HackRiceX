@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 
 
 const HomePageWrapper = styled.div`
-  background-color: purple;
+  background-color: black;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
@@ -50,7 +50,7 @@ const TakeQuizButtonWrapper = styled.div`
   width: 15vw;
   margin: 20px 20vw;
   text-decoration: none;
-  background-color:#1f1f1f;
+  background-color:#37af37;
   color:white;
 `;
 function TakeQuizButton(props) {
