@@ -23,6 +23,8 @@ const DonateTitle = styled.div`
     grid-area: DonateTitle;
     font-size: 40px;
     margin: 30px;
+    font-weight: bold;
+    color: #293241;
       
 `;
 
@@ -34,7 +36,7 @@ const DescriptionDonation = styled.div`
 const LeftColDonate = styled.div`
     grid-area: LeftColDonate;
     margin: 30px;
-    background-color: #cacbcc;
+    background-color: #98c1d9;
     height: 40%;
     padding-top: 20px;
 `;
@@ -43,7 +45,7 @@ const RightColDonate = styled.div`
     grid-area: RightColDonate;
     font-size: 20px;
     margin: 30px;
-    background-color: #cacbcc;
+    background-color: #98c1d9;
     height: 40%;
     padding-top: 20px;
     

@@ -13,24 +13,25 @@ const GeneralPageWrapper = styled.div`
     "headerSpace"
     "mainDisplay"
     "footer";
-overflow: hidden;
   
 `;
 
 const HeaderWrapper = styled.div`
   grid-area: headerSpace;
   background-color: red;
+  overflow: hidden;
 `;
 
 const MainDisplayWrapper = styled.div`
   grid-area: mainDisplay;
   background-color: yellow;
-  text-align: center;
+  overflow: auto;
 `;
 
 const FooterWrapper = styled.div`
   grid-area: footer;
-  background-color: green;
+  background-color: #3d5a80;
+  overflow: hidden;
 `;
 
 function GeneralPageContainer() {
