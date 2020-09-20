@@ -11,7 +11,7 @@ import Anna from './../../../Images/anna.jpeg';
 const AboutUsWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 4fr 4fr;
+    grid-template-rows: 1.5fr 4fr 4fr;
     grid-template-areas:
         "AboutUsTitle AboutUsTitle"
         "NewtonBlurb JanetBlurb"
@@ -27,7 +27,7 @@ const AboutUsTitle = styled.div`
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    margin: 50px;
+    margin: 40px;
     color: #293241;
 `;
 
