@@ -55,7 +55,7 @@ const Lawyers = (results) => {
         // Find the top 3 highest-scoring lawyers and save their indices.
         let top_3_indices = [];
         for (let i = 0; i < 3; i++) {
-          high_score = Math.max(...lawyer_scores);
+          let high_score = Math.max(...lawyer_scores);
           let high_score_index = 0;
           for (let j = 0; j < lawyer_scores.length; j++) {
             if (lawyer_scores[j] == high_score) {
@@ -68,7 +68,7 @@ const Lawyers = (results) => {
         // Find and return the top 3 highest-scoring lawyers based on their indices.
         let top_3_lawyers = [];
         for (let i = 0; i < 3; i++) {
-          lawyer_index = top_3_indices[i];
+          let lawyer_index = top_3_indices[i];
           top_3_lawyers.push(lawyer_list[lawyer_index]);
         }
         console.log(top_3_lawyers);
