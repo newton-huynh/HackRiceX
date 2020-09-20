@@ -156,11 +156,11 @@ const Quiz = () => (
                             <div className='error-message'>{errors.race}</div>
                         ) : null}
                     </div>
-                    <button type="submit" style={{ fontSize: "18px", borderStyle: "solid", borderColor: "#3d5a80", borderWidth: "4px", borderRadius: "10px" }}>Submit</button>
+                    <MatchResults lawyers={top_3_lawyers}></MatchResults>
                 </Form>
             )}
         </Formik>
-        <MatchResults lawyers={top_3_lawyers}></MatchResults>
+
     </div >
 );
 
