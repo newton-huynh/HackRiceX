@@ -10,7 +10,7 @@ const HeaderWrapper = styled.div`
   grid-template-areas: "LogoSpace NavBarSpace";
   height: 100%;
   width: auto;
-  background-color: pink;
+  background-color: #3d5a80;
   align-items: center;
   justify-content: center;
 `;
@@ -35,11 +35,12 @@ const NavBarWrapper = styled.div`
 `;
 
 const StyledNavLink = styled(NavLink)`
-background-color: skyblue;
-padding: 7px 10px 10px 10px;
-border-radius:20px;
-margin: 7px;
-text-decoration: none;
+  background-color: #98c1d9;
+  padding: 7px 10px 10px 10px;
+  border-radius:20px;
+  margin: 7px;
+  text-decoration: none;
+  color: #293241;
 `
 function NavBarItem(props) {
     return(
