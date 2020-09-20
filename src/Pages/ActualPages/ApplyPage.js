@@ -14,7 +14,7 @@ function ApplyPage() {
         frameborder="0"
         onmousewheel=""
         width="100%"
-        height="900"
+        height="100%"
         sx={{ background: "transparent", border: "1px solid #ccc" }}
       ></iframe>
     </ApplyPageWrapper>
