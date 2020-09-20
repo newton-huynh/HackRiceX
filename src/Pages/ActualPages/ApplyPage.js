@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import SignupForm from "./Apply/ApplyForm.js";
 
 function ApplyPage() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <SignupForm></SignupForm>
+    </div>
+  );
 }
 
-export default ApplyPage
+export default ApplyPage;
