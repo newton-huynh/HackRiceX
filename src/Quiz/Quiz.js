@@ -204,33 +204,42 @@ const lawyers = {
 const locations = ['Houston, TX', 'San Antonio, TX', 'Dallas, TX', 'Austin, TX', 'Corpus Christi, TX', 'McAllen, TX', 'No Preference'];
 const locationOptions = locations.map(location =>
     <div className="quiz-option">
-        <label className="button-appearance">{location}
-            <Field className="radio-button" type="radio" name="location" value={location} />
-        </label>
+        
+        <Field type="radio" name="location" value={location} />
+        <label>{location}</label>
+
     </div>
 );
 
 const expertises = ['Family Law', 'Criminal Defense', 'Accident', 'Assault', 'Personal Injury', 'No Preference'];
 const expertiseOptions = expertises.map(expertise =>
     <div className="quiz-option">
+        
+        <Field type="radio" name="expertise" value={expertise} />
         <label>{expertise}</label>
-        <Field className="radio-button" type="radio" name="expertise" value={expertise} />
+
     </div>
 );
 
 const languages = ['Spanish', 'French', 'Arabic', 'Chinese', 'No Preference'];
 const languageOptions = languages.map(language =>
     <div className="quiz-option">
+
+        
+        <Field type="radio" name="language" value={language} />
         <label>{language}</label>
-        <Field className="radio-button" type="radio" name="language" value={language} />
+
     </div>
 );
 
 const races = ['Black', 'Hispanic', 'No Preference'];
 const raceOptions = races.map(race =>
     <div className="quiz-option">
+
+        
+        <Field type="radio" name="race" value={race} />
         <label>{race}</label>
-        <Field className="radio-button" type="radio" name="race" value={race} />
+
     </div>
 );
 
@@ -245,13 +254,13 @@ const Quiz = () => (
             }}
             validationSchema={Yup.object().shape({
                 location: Yup.string()
-                    .required('Required'),
+                    .required('*Required'),
                 expertise: Yup.string()
-                    .required('Required'),
+                    .required('*Required'),
                 language: Yup.string()
-                    .required('Required'),
+                    .required('*Required'),
                 race: Yup.string()
-                    .required('Required'),
+                    .required('*Required'),
             })}
             onSubmit={async values => {
                 await new Promise(r => setTimeout(r, 500));
@@ -316,35 +325,36 @@ const Quiz = () => (
             }}
         >
             {({ errors, touched }) => (
-                <Form>
-                    <div className="quiz-question">
+                <Form className='entire-quiz'>
+
+                    <div className='quiz-question'>
                         <p className="quiz-label">Select your preferred location:</p>
-                        {locationOptions}
+                        <div className='quiz-answers'>{locationOptions}</div>
                         {errors.location && touched.location ? (
-                            <div>{errors.location}</div>
+                            <div className='error-message'>{errors.location}</div>
                         ) : null}
                     </div>
                     < div className="quiz-question">
                         <p className="quiz-label">Select your preferred expertise:</p>
-                        {expertiseOptions}
+                        <div className="quiz-answers">{expertiseOptions}</div>
                         {errors.expertise && touched.expertise ? (
-                            <div>{errors.expertise}</div>
+                            <div className='error-message'>{errors.expertise}</div>
                         ) : null}
                     </div>
 
                     <div className="quiz-question">
                         <p className="quiz-label">Select your preferred language:</p>
-                        {languageOptions}
+                        <div className="quiz-answers">{languageOptions}</div>
                         {errors.language && touched.language ? (
-                            <div>{errors.language}</div>
+                            <div className='error-message'>{errors.language}</div>
                         ) : null}
                     </div>
 
                     <div className="quiz-question">
                         <p className="quiz-label">Select your preferred race:</p>
-                        {raceOptions}
+                        <div className="quiz-answers">{raceOptions}</div>
                         {errors.race && touched.race ? (
-                            <div>{errors.race}</div>
+                            <div className='error-message'>{errors.race}</div>
                         ) : null}
                     </div>
 
