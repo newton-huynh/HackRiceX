@@ -14,6 +14,8 @@ flex-wrap: wrap;
 
 `
 
+
+
 function TakeQuizPage() {
     return (
         <QuizPageWrapper>

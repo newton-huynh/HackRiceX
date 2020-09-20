@@ -34,7 +34,7 @@ const HeaderWrapper = styled.div`
 
 const MainDisplayWrapper = styled.div`
   grid-area: mainDisplay;
-  background-color: yellow;
+  background-color: white;
   overflow: auto;
 `;
 
