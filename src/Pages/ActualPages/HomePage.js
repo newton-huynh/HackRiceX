@@ -67,7 +67,7 @@ function HomePage() {
           In one minute, we'll find the right pro bono lawyers just for you, so
           you can focus on the issues that truly matter.
         </HomePageSubText>
-        <TakeQuizButton name="TAKE QUIZ" />
+        <TakeQuizButton name="MATCH" />
       </HomePageMainText>
     </HomePageWrapper>
   );
