@@ -22,7 +22,7 @@ const DonateTitle = styled.div`
     
     grid-area: DonateTitle;
     font-size: 40px;
-    margin: 30px;
+    margin: 40px;
     font-weight: bold;
     color: #293241;
       

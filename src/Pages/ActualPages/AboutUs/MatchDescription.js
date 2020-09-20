@@ -56,7 +56,7 @@ function MatchDescription() {
             </MatchDescriptionList>
             <MatchDescriptionWords>
                 If you're curious about how we actually make these matches, we assign weights to each criteria. We assigned heavier
-                weights to the criteria that are more important—- location has the largest weight, since that's the most crucial criteria.
+                weights to the criteria that are more important—location has the largest weight, since that's the most crucial criteria.
                 For each lawyer, they'll get an overall score based on the weights, and the more a lawyer matches with your input criteria, 
                 the higher score they will receive and therefore be recommended higher. 
             </MatchDescriptionWords>
